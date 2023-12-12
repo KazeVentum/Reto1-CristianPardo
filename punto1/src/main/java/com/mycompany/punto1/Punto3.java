@@ -9,17 +9,18 @@ public class Punto3 {
     public static void main(String[] args) throws IOException {
         String palabra = "";
         String newPalabra = "";
-        int j = 0;
         int i = 0;
 
         // Recibir NIF 
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Ingrese la palabra: ");
         palabra = br.readLine();
-        i = palabra.length();
-        
-        for (int j = 0; i > (palabra.length()); i--) {
-            newPalabra+= palabra.charAt(i);
+        i = palabra.length()-1;
+
+        System.out.println(i);
+
+        for (int j = 0; i > j; i--) {
+            newPalabra+= palabra.charAt(i-1);
         }
         System.out.println(newPalabra);
 
